@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .buttons {
+    background-color: hsl(65, 100%, 93%);
+    color: rgb(90, 90, 90);
+    padding: 2rem;
+    border-radius: 40px;
+  }
+  
+  .current-grid {
+    background-color: hsl(65, 100%, 93%);
+    margin-bottom: 0.5rem;
+    padding: 0.6rem;
+  }
+  .new-grid {
+    padding: 0 0.6rem;
+    background-color: hsl(68, 84%, 58%);
+    border-radius: 10px;
+  }
+  
+  input[type="range"] {
+    background: red;
+  }
+  button {
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 40px;
+    border: none;
+    background-color: hsl(76, 51%, 52%);
+    color: #fff;
+    font-weight: bolder;
+  }
+  button:hover{
+    background-color: hsl(76, 46%, 36%);
+  }
+  
+  @media (orientation: portrait) {
+    .container {
+      flex-direction: column;
+    }
+  }
