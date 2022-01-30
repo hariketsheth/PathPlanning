@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Path Planning</title>
+  </head>
+  <body>
+    <div class="container">
+      <canvas id="canvas1"></canvas>
+      <div class="buttons">
+        <div class="current-grid">
+          <button onclick="iteration()">Iterate once</button>
+          <button onclick="solve()">Solve</button>
+          <div>
+            Delay between each iteration (ms)
+            <input
+              type="range"
+              value="20"
+              min="10"
+              max="400"
+              step="10"
+              oninput="this.nextElementSibling.value = this.value"
+              id="iterationDelay"
+            />
+            <output>20</output>
+          </div>
+        </div>
+        <div class="new-grid">
+          Grid size
+          <input
+            type="range"
+            value="30"
+            min="5"
+            max="100"
+            oninput="this.nextElementSibling.value = this.value"
+            id="gridSize"
+          />
+          <output>24</output>
+          <button onclick="newGrid()">New Grid</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
